@@ -64,6 +64,46 @@ app.directive('sluytertijdAlbum', function () {
     };
 });
 
+app.controller('homepageController', ['$scope', function ($scope) {
+    var ctrl = this;
+
+    ctrl.selectedAlbumName = undefined;
+
+    ctrl.getAlbumNames = function() {
+        return Object.keys(albums);
+    };
+
+    ctrl.getPathToAlbumPicture = function(albumName) {
+        return "images/" + albumName + "/small/" + ctrl.getAlbum(albumName).pictures[0].src;
+    };
+
+    ctrl.getAlbum = function(albumName) {
+        return albums[albumName];
+    };
+
+    ctrl.selectAlbumName = function(albumName) {
+        ctrl.selectedAlbumName = albumName;
+    };
+
+    ctrl.albumNameSelected = function() {
+        return ctrl.selectedAlbumName !== undefined;
+    };
+}]);
+
+
+app.controller('portfolioController', ['$window', function ($window) {
+    var ctrl = this;
+
+    ctrl.selectedAlbumName = undefined;
+
+    ctrl.init = function() {
+        var hash = $window.location.hash
+        ctrl.selectedAlbumName = hash.substring(1, hash.length);
+    };
+}]);
+
+
+
 app.controller('albumController', ['$scope', function ($scope) {
     var ctrl = this;
 

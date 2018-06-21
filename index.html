@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Album</title>
+    <title>SLuytertijd</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -19,21 +19,59 @@
 <body>
 
 
-<nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">SLuytertijd</a>
-
-    <div class="collapse navbar-collapse navbar-nav" id="navigation">
-        <a class="nav-link nav-item active" href="#">Portfolio</span></a>
-        <a class="nav-link nav-item" href="#">Aanbod</a>
-        <a class="nav-link nav-item" href="#">Over</a>
-        <a class="nav-link nav-item" href="#">Contact</a>
-        </ul>
-    </div>
+<nav>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Portfolio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Aanbod</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Over</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+        </li>
+    </ul>
 </nav>
 
-<main role="main" data-ng-app="sluytertijd" data-ng-cloak>
+<main role="main" data-ng-app="sluytertijd" data-ng-controller="homepageController as ctrl" data-ng-cloak>
 
-    <sluytertijd-album album="'studio'"/>
+    <div data-ng-if="!ctrl.albumNameSelected()">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">SLuytertijd</h1>
+                <p class="lead text-muted">Welkom op mijn website</p>
+            </div>
+        </section>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-4" data-ng-repeat="albumName in ctrl.getAlbumNames()">
+                        <div class="card mb-4 box-shadow">
+                            <a data-ng-href="portfolio.html#{{albumName}}">
+                                <img class="card-img-top" data-ng-src="{{ctrl.getPathToAlbumPicture(albumName)}}"
+                                     alt="Card image cap" data-ng-click="ctrl.selectAlbumName(albumName)">
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text">{{ctrl.getAlbum(albumName).caption}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <sluytertijd-album album="ctrl.selectedAlbumName" data-ng-if="ctrl.albumNameSelected()"/>
+
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+        <a class="navbar-brand" href="#">SLuytertijd</a>
+    </nav>
+
 
 </main>
 

@@ -23,7 +23,7 @@
     <a class="navbar-brand" href="#">SLuytertijd</a>
 
     <div class="collapse navbar-collapse navbar-nav" id="navbarsExample02">
-                <a class="nav-link nav-item active" href="#">Portfolio</span></a>
+                <a class="nav-link nav-item active" href="index.html">Portfolio</span></a>
                 <a class="nav-link nav-item" href="#">Aanbod</a>
                 <a class="nav-link nav-item" href="#">Over</a>
                 <a class="nav-link nav-item" href="#">Contact</a>
@@ -31,9 +31,9 @@
     </div>
 </nav>
 
-<main role="main" data-ng-app="sluytertijd" data-ng-cloak>
+<main role="main" data-ng-app="sluytertijd" data-ng-controller="portfolioController as ctrl" data-ng-init="ctrl.init()" data-ng-cloak>
 
-    <sluytertijd-album album="'studio'"/>
+    <sluytertijd-album album="ctrl.selectedAlbumName"/>
 
 </main>
 
