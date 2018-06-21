@@ -7,13 +7,30 @@
 
 <div class="album py-5 bg-light">
     <div class="container">
-
         <div class="row">
             <div class="col-md-4" data-ng-repeat="picture in ctrl.getAlbum().pictures">
                 <div class="card mb-4 box-shadow">
-                    <a data-target=".bd-example-modal-lg" data-ng-click="ctrl.selectedPicture = picture">
-                        <img class="card-img-top img-fluid" data-ng-src="{{ctrl.getPathToSmallPicture(picture)}}" alt="{{picture.caption}}">
+                    <a data-ng-click="ctrl.selectPicture(picture)">
+                        <img class="card-img-top img-fluid" data-ng-src="{{ctrl.getPathToSmallPicture(picture)}}"
+                             alt="{{picture.caption}}">
                     </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal for images -->
+<div id="portfolioLightbox" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div data-ng-show="ctrl.selectedPicture">
+                    <img class="card-img-top img-fluid"
+                         data-ng-src="{{ctrl.getPathToLargePicture(ctrl.selectedPicture)}}">
                 </div>
             </div>
         </div>

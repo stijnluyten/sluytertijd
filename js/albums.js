@@ -28,6 +28,22 @@ albums = {
             {
                 src: "thorsday4.jpg",
                 caption: "Thor"
+            },
+            {
+                src: "DSC_0347-2.jpg",
+                caption: "Broers 1"
+            },
+            {
+                src: "thorsday4.jpg",
+                caption: "Thor"
+            },
+            {
+                src: "DSC_0347-2.jpg",
+                caption: "Broers 1"
+            },
+            {
+                src: "thorsday4.jpg",
+                caption: "Thor"
             }
         ]
     }
@@ -59,9 +75,25 @@ app.controller('albumController', ['$scope', function ($scope) {
 
     ctrl.getPathToSmallPicture = function(picture) {
         return "images/" + $scope.album + "/small/" + picture.src;
-    }
+    };
+
+    ctrl.getPathToLargePicture = function(picture) {
+        return "images/" + $scope.album + "/large/" + picture.src;
+    };
 
     ctrl.isSelected = function (picture) {
         return picture === ctrl.selectedPicture;
-    }
+    };
+
+    ctrl.selectPicture = function(picture) {
+        ctrl.selectedPicture = picture;
+
+        $('.modal .modal-body').css('overflow-y', 'auto');
+        $('.modal .modal-body').css('max-height', $(window).height() * 0.9);
+        $('.modal .modal-body img').css('max-height', $(window).height() * 0.8);
+        $('.modal .modal-body img').css('width', 'auto');
+
+        $('#portfolioLightbox').modal();
+    };
 }]);
+
