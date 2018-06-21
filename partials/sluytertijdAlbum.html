@@ -28,9 +28,22 @@
         <div class="modal-content">
             <div class="modal-body">
 
-                <div data-ng-show="ctrl.selectedPicture">
-                    <img class="card-img-top img-fluid"
-                         data-ng-src="{{ctrl.getPathToLargePicture(ctrl.selectedPicture)}}">
+                <div id="lightboxCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item" data-ng-class="{active: ctrl.isSelected(picture)}" data-ng-repeat="picture in ctrl.getAlbum().pictures">
+                            <img class="card-img-top img-fluid w-auto"
+                                 data-ng-src="{{ctrl.getPathToLargePicture(picture)}}">
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#lightboxCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Vorige</span>
+                    </a>
+                    <a class="carousel-control-next" href="#lightboxCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Volgende</span>
+                    </a>
                 </div>
             </div>
         </div>

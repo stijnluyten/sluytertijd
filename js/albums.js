@@ -91,7 +91,6 @@ app.controller('albumController', ['$scope', function ($scope) {
         $('.modal .modal-body').css('overflow-y', 'auto');
         $('.modal .modal-body').css('max-height', $(window).height() * 0.9);
         $('.modal .modal-body img').css('max-height', $(window).height() * 0.8);
-        $('.modal .modal-body img').css('width', 'auto');
 
         $('#portfolioLightbox').modal();
     };
