@@ -27,23 +27,23 @@ albums = {
             },
             {
                 src: "thorsday4.jpg",
-                caption: "Thor"
+                caption: "Thor 1"
             },
             {
                 src: "DSC_0347-2.jpg",
-                caption: "Broers 1"
+                caption: "Broers 2"
             },
             {
                 src: "thorsday4.jpg",
-                caption: "Thor"
+                caption: "Thor 2"
             },
             {
                 src: "DSC_0347-2.jpg",
-                caption: "Broers 1"
+                caption: "Broers 3"
             },
             {
                 src: "thorsday4.jpg",
-                caption: "Thor"
+                caption: "Thor 3"
             }
         ]
     }
@@ -82,7 +82,9 @@ app.controller('albumController', ['$scope', function ($scope) {
     };
 
     ctrl.isSelected = function (picture) {
-        return picture === ctrl.selectedPicture;
+        return ctrl.selectedPicture !== undefined
+            && picture.src === ctrl.selectedPicture.src
+            && picture.caption === ctrl.selectedPicture.caption;
     };
 
     ctrl.selectPicture = function(picture) {
@@ -91,6 +93,7 @@ app.controller('albumController', ['$scope', function ($scope) {
         $('.modal .modal-body').css('overflow-y', 'auto');
         $('.modal .modal-body').css('max-height', $(window).height() * 0.9);
         $('.modal .modal-body img').css('max-height', $(window).height() * 0.8);
+        $('.carousel-item').removeClass('active');
 
         $('#portfolioLightbox').modal();
     };
