@@ -16,48 +16,50 @@
 
 </head>
 
-<body data-ng-app="sluytertijd" >
+<body data-ng-app="sluytertijd">
 
 
-<navigation data-page-name="'index'"></navigation>
+<navigation data-page-name="'contact'"></navigation>
 
-<main role="main" data-ng-controller="homepageController as ctrl" data-ng-cloak>
+<main role="main">
 
-    <div data-ng-if="!ctrl.albumNameSelected()">
         <section class="jumbotron text-center">
             <div class="container">
-                <h1 class="jumbotron-heading">SLuytertijd</h1>
-                <p class="lead text-muted">Welkom op mijn website</p>
+                <h1 class="jumbotron-heading">Contact</h1>
+                <p class="lead">
+                    Heb je zin in een fotoshoot? Zit je met een vraag? Je kan me op verschillende manieren bereiken.
+                </p>
             </div>
         </section>
 
-        <div class="album py-5 bg-light">
-            <div class="container">
 
-                <div class="row">
-                    <div class="col-md-4" data-ng-repeat="albumName in ctrl.getAlbumNames()">
-                        <div class="card mb-4 box-shadow">
-                            <a data-ng-href="portfolio.html#{{albumName}}">
-                                <img class="card-img-top" data-ng-src="{{ctrl.getPathToAlbumPicture(albumName)}}"
-                                     alt="Card image cap" data-ng-click="ctrl.selectAlbumName(albumName)">
-                            </a>
-                            <div class="card-body">
-                                <p class="card-text">{{ctrl.getAlbum(albumName).caption}}</p>
-                            </div>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-body">
+                            Telefoon <a href="tel:0495301213">0495301213</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-body">
+                            Email <a href="mailto:info@sluytertijd.be">info@sluytertijd.be</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-body">
+                            Facebook <a href="https://www.facebook.com/sluytertijd/">facebook.com/sluytertijd</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <sluytertijd-album album="ctrl.selectedAlbumName" data-ng-if="ctrl.albumNameSelected()"/>
-
-    <nav class="navbar fixed-bottom navbar-light bg-light">
-        <a class="navbar-brand" href="#">SLuytertijd</a>
-    </nav>
-
-
 </main>
 
 <!-- Bootstrap core JavaScript

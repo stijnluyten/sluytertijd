@@ -64,6 +64,16 @@ app.directive('sluytertijdAlbum', function () {
     };
 });
 
+app.directive('navigation', function () {
+    return {
+        restrict: 'E',
+        templateUrl: "partials/navigation.html",
+        scope: {
+            pageName: '='
+        }
+    };
+});
+
 app.controller('homepageController', ['$scope', function ($scope) {
     var ctrl = this;
 
