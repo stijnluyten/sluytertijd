@@ -16,21 +16,12 @@
 
 </head>
 
-<body>
+<body data-ng-app="sluytertijd">
 
-<nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">SLuytertijd</a>
-
-    <div class="collapse navbar-collapse navbar-nav" id="navbarsExample02">
-        <a class="nav-link nav-item active" href="index.html">Portfolio</span></a>
-        <a class="nav-link nav-item" href="aanbod.html">Aanbod</a>
-        <a class="nav-link nav-item" href="over.html">Over</a>
-        <a class="nav-link nav-item" href="contact.html">Contact</a>
-    </div>
-</nav>
+<navigation data-page-name="'index'"></navigation>
 
 
-<main role="main" data-ng-app="sluytertijd" data-ng-controller="portfolioController as ctrl" data-ng-init="ctrl.init()" data-ng-cloak>
+<main role="main" data-ng-controller="portfolioController as ctrl" data-ng-init="ctrl.init()" data-ng-cloak>
 
     <sluytertijd-album album="ctrl.selectedAlbumName"/>
 
@@ -51,6 +42,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 <script src="js/albums.js"></script>
+<script src="js/controllers.js"></script>
 
 </body>
 </html>

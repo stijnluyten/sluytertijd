@@ -16,12 +16,12 @@
 
 </head>
 
-<body data-ng-app="sluytertijd" >
+<body data-ng-app="sluytertijd" data-ng-cloak>
 
 
 <navigation data-page-name="'index'"></navigation>
 
-<main role="main" data-ng-controller="homepageController as ctrl" data-ng-cloak>
+<main role="main" data-ng-controller="homepageController as ctrl">
 
     <div data-ng-if="!ctrl.albumNameSelected()">
         <section class="jumbotron text-center">
@@ -75,6 +75,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 <script src="js/albums.js"></script>
+<script src="js/controllers.js"></script>
 
 </body>
 </html>
