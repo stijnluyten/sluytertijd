@@ -1,0 +1,87 @@
+main {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.top-banner {
+    background: url("/sluytertijd/images/sluytertijd-banner.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+
+    width: 60%;
+    max-width: 1200px;
+    height: 200px;
+}
+
+.navigation {
+    width: 800px;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0;
+    justify-items: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.navigation .item {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.image-gallery {
+    width: 1200px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0;
+    justify-items: center;
+    align-items: center;
+}
+
+.image-gallery .image {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    height: 300px;
+    max-width: 100%;
+
+    border: solid 2px black;
+}
+
+.image-gallery .image img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    width: 100%;
+    max-width: 100%;
+
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.image-gallery .image.portrait img {
+    top: 80%;
+}
+
+.image-gallery .image.fit img {
+    width: 130%;
+    max-width: 130%;
+}
+
+.image-gallery .image img:hover {
+    width: 110%;
+    max-width: 110%;
+    transition: all .3s ease;
+}
+
+.image-gallery .image.fit img:hover {
+    width: 120%;
+    max-width: 120%;
+}
