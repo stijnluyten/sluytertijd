@@ -1,3 +1,8 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
 main {
     display: grid;
     justify-items: center;
@@ -33,7 +38,7 @@ main {
 }
 
 .image-gallery {
-    width: 1200px;
+    width: 100%;
     max-width: 1200px;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -47,10 +52,11 @@ main {
     overflow: hidden;
 
     width: 100%;
-    height: 300px;
     max-width: 100%;
+    height: 30vw;
+    max-height: 300px;
 
-    border: solid 2px black;
+    border: solid 0.1rem black;
 }
 
 .image-gallery .image img {
@@ -67,12 +73,21 @@ main {
 }
 
 .image-gallery .image.portrait img {
-    top: 80%;
+
 }
 
-.image-gallery .image.fit img {
+.image-gallery .image.landscape img {
+    width: 150%;
+    max-width: 150%;
+}
+
+.image-gallery .image.square img {
     width: 130%;
     max-width: 130%;
+}
+
+.image-gallery .image.focus-up img {
+    top: 80%;
 }
 
 .image-gallery .image img:hover {
@@ -81,37 +96,43 @@ main {
     transition: all .3s ease;
 }
 
-.image-gallery .image.fit img:hover {
-    width: 120%;
-    max-width: 120%;
+.image-gallery .image.landscape img:hover {
+    width: 140%;
+    max-width: 140%;
 }
 
 .image-detail {
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: grid;
-    grid-template-columns: 10vw auto 10vw;
-    grid-gap: 0;
-    align-items: center;
-    justify-content: center;
+    min-height: 100%;
+    position: relative;
+    background-color: yellow;
 }
 .image-detail .previous, .image-detail .next {
     width: 10vw;
 }
+.bla {
 
-.image-detail .image {
-    background-color: red;
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/buiten/large/DSC_0378-1.jpg);
+    background-image: url(/sluytertijd/images/buiten/large/DSC_0378-1.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
-
+    min-height: 100%;
 }
-.image-detail .image img {
+.image-detail .image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vw;
     max-width: 100%;
-    max-height: 100%;
+    border: solid 2px black;
+}
+
+.image-detail .image img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    max-width: 100%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 }
