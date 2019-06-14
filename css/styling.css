@@ -10,31 +10,43 @@ main {
     font-family: 'Montserrat', sans-serif;
 }
 
-.top-banner {
+.top {
+    width: 100%;
+}
+
+.top .banner {
     background: url("/sluytertijd/images/sluytertijd-banner.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
 
     width: 60%;
-    max-width: 1200px;
-    height: 200px;
+    max-width: 800px;
+    height: 12vw;
+    margin: 0 auto;
 }
 
-.navigation {
-    width: 800px;
+.top .navigation {
+    width: 60%;
     max-width: 800px;
+
+    margin: 20px auto;
+
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 0;
     justify-items: center;
     align-items: center;
-    margin: 20px 0;
 }
 
-.navigation .item {
+.top .navigation .item {
     font-weight: 300;
-    font-size: 24px;
+    font-size: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+    .top .navigation .item {
+        font-size: 1rem;
+    }
 }
 
 .image-gallery {
