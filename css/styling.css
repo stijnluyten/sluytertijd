@@ -1,13 +1,13 @@
 body, html {
     height: 100%;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 main {
     display: grid;
     justify-items: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .top {
@@ -30,7 +30,7 @@ main {
     width: 60%;
     max-width: 800px;
 
-    margin: 20px auto;
+    margin: 20px auto 40px;
 
     display: grid;
     grid-template-columns: auto auto auto;
@@ -42,11 +42,34 @@ main {
 .top .navigation .item {
     font-weight: 300;
     font-size: 1.5rem;
+    background-color: #EBEBEB;
+    padding: 0.5rem 3rem;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+.top .navigation .item:hover {
+    background-color: #c8c8c8;
 }
 @media screen and (max-width: 768px) {
     .top .navigation .item {
         font-size: 1rem;
     }
+}
+
+.aanbod {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
+    justify-items: left;
+
+    padding: 0;
+    margin-bottom: 30px;
 }
 
 .image-gallery {
@@ -57,8 +80,14 @@ main {
     grid-gap: 0;
     justify-items: center;
     align-items: center;
+
+    border: 1px solid black;
+    padding: 0;
+    margin-bottom: 30px;
+    background-color: black;
 }
 
+.aanbod .image,
 .image-gallery .image {
     position: relative;
     overflow: hidden;
@@ -72,6 +101,7 @@ main {
     cursor: pointer;
 }
 
+.aanbod .image img,
 .image-gallery .image img {
     position: absolute;
     left: 50%;
@@ -129,9 +159,9 @@ main {
     cursor: pointer;
 
     border: solid white;
-    border-width: 0 3px 3px 0;
+    border-width: 0 10px 10px 0;
     display: inline-block;
-    padding: 3px;
+    padding: 15px;
 }
 
 .image-detail .next {
@@ -172,4 +202,23 @@ main {
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     transition: all .3s ease;
+}
+
+.footer {
+    margin: 30px auto;
+    max-width: 800px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+.footer > div {
+    margin-bottom: 5px;
+}
+
+.footer a {
+    color: #000000;
 }
