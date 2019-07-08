@@ -11,7 +11,7 @@ $('.image-gallery .image').click(
     function (event) {
         currentImage = event.target.attributes.src.value;
 
-        $('.image-detail .image img').attr('src', currentImage);
+        $('.image-detail .image img').attr('src', largeImageFor(currentImage));
         $('.image-detail').show();
     }
 );
@@ -28,7 +28,7 @@ $('.image-detail .next').click(function () {
     if (imagesOnPage[indexOfCurrentImage + 1]) {
         currentImage = imagesOnPage[indexOfCurrentImage + 1];
     }
-    $('.image-detail .image img').attr('src', currentImage);
+    $('.image-detail .image img').attr('src', largeImageFor(currentImage));
 });
 
 $('.image-detail .previous').click(function () {
@@ -36,5 +36,9 @@ $('.image-detail .previous').click(function () {
     if (imagesOnPage[indexOfCurrentImage - 1]) {
         currentImage = imagesOnPage[indexOfCurrentImage - 1];
     }
-    $('.image-detail .image img').attr('src', currentImage);
+    $('.image-detail .image img').attr('src', largeImageFor(currentImage));
 });
+
+function largeImageFor(currentImage) {
+	return currentImage.replace('small/', '');
+}
