@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Ik ben Stijn Luyten, vader van 3 en gepassioneerd fotograaf. Ik specialiseer me in portretfotografie en fotoreportages, maar doe ook wel eens productfotografie en grafisch design. Heel graag breng ik jou, je familie of een belangrijke gebeurtenis in je leven in beeld.">
+    <meta name="keywords" content="Fotograaf Boortmeerbeek Portret Event SLuytertijd">
+    <meta name="author" content="SLuytertijd">
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>SLuytertijd</title>
@@ -12,72 +13,74 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
           integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/album.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styling.css">
 
 </head>
 
-<body data-ng-app="sluytertijd">
+<body>
 
-
-<navigation data-page-name="'contact'"></navigation>
+<div class="image-detail">
+    <div class="previous"></div>
+    <div class="image">
+        <img src="images/buiten/large/yente-hofstade-DSC_0443-1.jpg">
+    </div>
+    <div class="next"></div>
+</div>
 
 <main role="main">
 
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h1 class="jumbotron-heading">Contact</h1>
-                <p class="lead">
-                    Heb je zin in een fotoshoot? Zit je met een vraag? Je kan me op verschillende manieren bereiken.
-                </p>
+    <div class="top">
+        <a href="index2.html">
+            <div class="banner">
             </div>
-        </section>
+        </a>
+        <div class="navigation">
+            <div class="item">Aanbod</div>
+            <div class="item">Over</div>
+            <div class="item selected"><a href="contact.html">Contact</a></div>
+        </div>
+    </div>
 
+    <div class="aanbod">
+        <div class="image portrait">
+            <img src="images/buiten/large/DSC_0024.jpg">
+        </div>
+        <div class="uitleg">
+            <h1>Facebook</h1>
+            <a href="https://www.facebook.com/sluytertijd/">facebook.com/sluytertijd</a>
+        </div>
+    </div>
 
-    <div class="album py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-body">
-                            Telefoon <a href="tel:0495301213">0495301213</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-body">
-                            Email <a href="mailto:info@sluytertijd.be">info@sluytertijd.be</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-body">
-                            Facebook <a href="https://www.facebook.com/sluytertijd/">facebook.com/sluytertijd</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="aanbod flipped">
+        <div class="image portrait">
+            <img src="images/buiten/large/DSC_0024.jpg">
+        </div>
+        <div class="uitleg">
+            <h1>Email</h1>
+            <a href="mailto:info@sluytertijd.be">info@sluytertijd.be</a>
+        </div>
+    </div>
+
+    <div class="aanbod">
+        <div class="image portrait">
+            <img src="images/buiten/large/DSC_0024.jpg">
+        </div>
+        <div class="uitleg">
+            <h1>Telefoon</h1>
+            <a href="tel:0495301213">0495301213</a>
         </div>
     </div>
 </main>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<div class="footer">
+    <div class="company">SLuytertijd</div>
+    <div class="vat">BE0689.563.003</div>
+    <div class="vat-disclaimer">Kleine onderneming onderworpen aan de vrijstellingsregeling van belasting. Btw niet toepasselijk.</div>
+</div>
 
-<script src="js/albums.js"></script>
-<script src="js/controllers.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/gallery.js"></script>
 
 </body>
 </html>

@@ -12,6 +12,7 @@ main {
 
 .top {
     width: 100%;
+    margin-top: 10px;
 }
 
 .top .banner {
@@ -19,6 +20,7 @@ main {
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
+    cursor: pointer;
 
     width: 60%;
     max-width: 800px;
@@ -26,16 +28,20 @@ main {
     margin: 0 auto;
 }
 
-.top .navigation {
+.top .banner img {
     width: 60%;
+    max-width: 800px;
+}
+
+.top .navigation {
     max-width: 800px;
 
     margin: 20px auto 40px;
 
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 0;
-    justify-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
@@ -43,6 +49,8 @@ main {
     font-weight: 300;
     font-size: 1.5rem;
     background-color: #EBEBEB;
+    margin: 10px;
+    color: #000000;
     padding: 0.5rem 3rem;
     -webkit-border-radius: 14px;
     -moz-border-radius: 14px;
@@ -51,25 +59,62 @@ main {
     cursor: pointer;
     text-transform: lowercase;
 }
+
+.top .navigation .item.selected {
+    background-color: #c8c8c8;
+}
+
+.top .navigation .item a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.top .navigation .item a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
 .top .navigation .item:hover {
     background-color: #c8c8c8;
 }
+
 @media screen and (max-width: 768px) {
     .top .navigation .item {
         font-size: 1rem;
+        padding: 0.5rem 1rem;
     }
+}
+
+.section {
+    margin-bottom: 20px;
 }
 
 .aanbod {
     width: 100%;
     max-width: 800px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0;
-    justify-items: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
 
     padding: 0;
     margin-bottom: 30px;
+}
+
+.aanbod.flipped {
+    flex-flow: row-reverse;
+}
+
+@media screen and (max-width: 768px) {
+    .aanbod {
+        flex-direction: column;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .aanbod.flipped {
+        flex-flow: column;
+    }
 }
 
 .image-gallery {
@@ -85,6 +130,10 @@ main {
     padding: 0;
     margin-bottom: 30px;
     background-color: black;
+}
+
+.aanbod .uitleg {
+    padding: 20px;
 }
 
 .aanbod .image,
@@ -113,6 +162,21 @@ main {
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
+}
+
+.aanbod .image {
+    cursor: auto;
+    width: calc(50% - 20px);
+}
+.aanbod .uitleg {
+    width: calc(50% + 20px);
+}
+
+@media screen and (max-width: 768px) {
+    .aanbod .image,
+    .aanbod .uitleg {
+        width: 80%;
+    }
 }
 
 .image-gallery .image.portrait img {
@@ -211,8 +275,18 @@ main {
     flex-flow: column;
     align-items: flex-start;
     justify-content: center;
+    background-color: #EBEBEB;
+    padding: 10px;
+    color: #c8c8c8;
 
     text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-wrap: wrap;
+        margin: 30px 20px;
+    }
 }
 
 .footer > div {
