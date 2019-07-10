@@ -42,32 +42,30 @@ main {
 .top .navigation {
     max-width: 800px;
 
-    margin: 20px auto 40px;
+    margin: 0 auto 40px;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+	
+	font-family: 'Gloria Hallelujah', cursive;
 }
 
 .top .navigation .item {
     font-weight: 300;
     font-size: 1.5rem;
-    background-color: #dddddd;
     margin: 10px;
     color: #000000;
     padding: 0.5rem 3rem;
-    -webkit-border-radius: 14px;
-    -moz-border-radius: 14px;
-    border-radius: 14px;
     transition: all 0.3s;
     cursor: pointer;
     text-transform: lowercase;
 }
 
 .top .navigation .item.selected {
-	background-color: #b0b0b0;
+	
 }
 
 .top .navigation a {
@@ -81,7 +79,7 @@ main {
 }
 
 .top .navigation .item:hover {
-    background-color: #b0b0b0;
+    
 }
 
 @media screen and (max-width: 768px) {
