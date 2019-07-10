@@ -10,6 +10,15 @@ main {
     align-items: center;
 }
 
+h1 {
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+a {
+	color: #000000;
+	text-decoration: underline;
+}
+
 .top {
     width: 100%;
     margin-top: 10px;
@@ -167,6 +176,8 @@ main {
 .aanbod .image {
     cursor: auto;
     width: calc(50% - 20px);
+	height: 50vw;
+	background-color: #000000;
 }
 .aanbod .uitleg {
     width: calc(50% + 20px);
@@ -176,6 +187,7 @@ main {
     .aanbod .image,
     .aanbod .uitleg {
         width: 80%;
+		padding: 5px 0;
     }
 }
 
@@ -183,18 +195,26 @@ main {
 
 }
 
+.aanbod .image.landscape img,
 .image-gallery .image.landscape img {
     width: 150%;
     max-width: 150%;
 }
 
+.aanbod .image.square img,
 .image-gallery .image.square img {
     width: 130%;
     max-width: 130%;
 }
 
+.aanbod .image.focus-up img,
 .image-gallery .image.focus-up img {
     top: 80%;
+}
+
+.aanbod .image.focus-down img,
+.image-gallery .image.focus-down img {
+    top: 20%;
 }
 
 .image-gallery .image img:hover {
