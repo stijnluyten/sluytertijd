@@ -106,6 +106,16 @@ a:hover {
 
 .aanbod {
     width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0;
+    justify-items: center;
+    align-items: center;
+}
+
+.image-met-uitleg {
+    width: 100%;
     max-width: 800px;
     display: flex;
     flex-direction: row;
@@ -116,18 +126,18 @@ a:hover {
     margin-bottom: 30px;
 }
 
-.aanbod.flipped {
+.image-met-uitleg.flipped {
     flex-flow: row-reverse;
 }
 
 @media screen and (max-width: 768px) {
-    .aanbod {
+    .image-met-uitleg {
         flex-direction: column;
         flex-flow: column;
         align-items: center;
     }
 
-    .aanbod.flipped {
+    .image-met-uitleg.flipped {
         flex-flow: column;
     }
 }
@@ -147,11 +157,11 @@ a:hover {
     background-color: black;
 }
 
-.aanbod .uitleg {
+.image-met-uitleg .uitleg {
     padding: 0 20px;
 }
 
-.aanbod .image,
+.image-met-uitleg .image,
 .image-gallery .image {
     position: relative;
     overflow: hidden;
@@ -165,7 +175,7 @@ a:hover {
     cursor: pointer;
 }
 
-.aanbod .image img,
+.image-met-uitleg .image img,
 .image-gallery .image img {
     position: absolute;
     left: 50%;
@@ -179,19 +189,19 @@ a:hover {
     transform: translate(-50%,-50%);
 }
 
-.aanbod .image {
+.image-met-uitleg .image {
     cursor: auto;
     width: calc(50% - 20px);
 	height: 50vw;
 	background-color: #000000;
 }
-.aanbod .uitleg {
+.image-met-uitleg .uitleg {
     width: calc(50% + 20px);
 }
 
 @media screen and (max-width: 768px) {
-    .aanbod .image,
-    .aanbod .uitleg {
+    .image-met-uitleg .image,
+    .image-met-uitleg .uitleg {
         width: 80%;
 		padding: 5px 0;
     }
@@ -201,24 +211,24 @@ a:hover {
 
 }
 
-.aanbod .image.landscape img,
+.image-met-uitleg .image.landscape img,
 .image-gallery .image.landscape img {
     width: 150%;
     max-width: 150%;
 }
 
-.aanbod .image.square img,
+.image-met-uitleg .image.square img,
 .image-gallery .image.square img {
     width: 130%;
     max-width: 130%;
 }
 
-.aanbod .image.focus-up img,
+.image-met-uitleg .image.focus-up img,
 .image-gallery .image.focus-up img {
     top: 80%;
 }
 
-.aanbod .image.focus-down img,
+.image-met-uitleg .image.focus-down img,
 .image-gallery .image.focus-down img {
     top: 20%;
 }
