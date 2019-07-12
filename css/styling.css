@@ -20,6 +20,11 @@ a {
 	text-decoration: none;
 }
 
+p.uitleg {
+	max-width: 800px;
+	text-align: center;
+}
+
 a:hover {
 	color: #000000;
 	text-decoration: underline;
@@ -109,9 +114,79 @@ a:hover {
     max-width: 1200px;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 0;
+    grid-gap: 30px;
     justify-items: center;
     align-items: center;
+	
+	margin-bottom: 30px;
+	transition: all .3s ease;
+}
+
+@media screen and (max-width: 1200px) {
+	.aanbod {
+		margin-left: 20px;
+		margin-right: 20px;
+		width: calc(100% - 40px);
+		grid-gap: 20px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.aanbod {
+		max-width: 600px;
+		grid-template-columns: auto;
+	    margin-left: 20px;
+		margin-right: 20px;
+		width: calc(100% - 40px);
+		grid-gap: 20px;
+	}
+}
+
+.aanbod a {
+	position: relative;
+	height: 300px;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+	border: solid 0.1rem black;
+	transition: all .3s ease;
+}
+
+.aanbod a h1 {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 0;
+	
+	width: 100%;
+	height: 50px;
+	
+	background-color: rgba(255,255,255,0.8);
+	
+	text-align: center;
+	transition: all .3s ease;
+}
+
+.aanbod a:hover h1 {
+	height: 100%;
+	vertical-align: center;
+}
+
+.aanbod a:hover {
+	text-decoration: none;
+}
+
+.aanbod a.shoot {
+	background-image: url("../images/shoot/shoot_2018-04-10_08-38-31.jpg");
+}
+
+.aanbod a.box {
+	background-image: url("../images/box/box_2018-06-10_11-00-12.jpg");
+}
+
+.aanbod a.event {
+	background-image: url("../images/event/event_2019-05-18_16-56-42.jpg");
 }
 
 .image-met-uitleg {
