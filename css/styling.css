@@ -144,7 +144,6 @@ a:hover {
 
 .aanbod a {
 	position: relative;
-	height: 300px;
 	width: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -160,7 +159,8 @@ a:hover {
 	margin-bottom: 0;
 	
 	width: 100%;
-	height: 50px;
+	height: auto;
+	padding: 0 10px;
 	
 	background-color: rgba(255,255,255,0.8);
 	
@@ -169,24 +169,18 @@ a:hover {
 }
 
 .aanbod a:hover h1 {
-	height: 100%;
+	
 	vertical-align: center;
 }
 
 .aanbod a:hover {
 	text-decoration: none;
+	background-size: 130%;
 }
 
-.aanbod a.shoot {
-	background-image: url("../images/shoot/shoot_2018-04-10_08-38-31.jpg");
-}
-
-.aanbod a.box {
-	background-image: url("../images/box/box_2018-06-10_11-00-12.jpg");
-}
-
-.aanbod a.event {
-	background-image: url("../images/event/event_2019-05-18_16-56-42.jpg");
+.aanbod a.square:hover {
+	text-decoration: none;
+	background-size: 110%;
 }
 
 .image-met-uitleg {
@@ -236,6 +230,7 @@ a:hover {
     padding: 0 20px;
 }
 
+.aanbod .image,
 .image-met-uitleg .image,
 .image-gallery .image {
     position: relative;
@@ -250,6 +245,7 @@ a:hover {
     cursor: pointer;
 }
 
+.aanbod .image img,
 .image-met-uitleg .image img,
 .image-gallery .image img {
     position: absolute;
@@ -286,12 +282,14 @@ a:hover {
 
 }
 
+.aanbod .image.landscape img,
 .image-met-uitleg .image.landscape img,
 .image-gallery .image.landscape img {
     width: 150%;
     max-width: 150%;
 }
 
+.aanbod .image.square img,
 .image-met-uitleg .image.square img,
 .image-gallery .image.square img {
     width: 130%;
@@ -308,12 +306,14 @@ a:hover {
     top: 20%;
 }
 
+.aanbod a:hover .image img,
 .image-gallery .image img:hover {
     width: 110%;
     max-width: 110%;
     transition: all .3s ease;
 }
 
+.aanbod a:hover .image.landscape img,
 .image-gallery .image.landscape img:hover {
     width: 140%;
     max-width: 140%;
