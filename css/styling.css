@@ -309,6 +309,13 @@ a:hover {
     max-width: 150%;
 }
 
+.aanbod .image.panorama img,
+.image-met-uitleg .image.panorama img,
+.image-gallery .image.panorama img {
+    width: 200%;
+    max-width: 200%;
+}
+
 .aanbod .image.square img,
 .image-met-uitleg .image.square img,
 .image-gallery .image.square img {
@@ -338,6 +345,12 @@ a:hover {
 .image-gallery .image.landscape img:hover {
     width: 140%;
     max-width: 140%;
+}
+
+.aanbod a:hover .image.panorama img,
+.image-gallery .image.panorama img:hover {
+    width: 160%;
+    max-width: 160%;
 }
 
 .image-detail {
@@ -410,7 +423,6 @@ a:hover {
     flex-flow: column;
     align-items: flex-start;
     justify-content: center;
-    background-color: #EBEBEB;
     padding: 10px;
     color: #c8c8c8;
 
