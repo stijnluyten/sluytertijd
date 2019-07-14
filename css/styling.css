@@ -148,8 +148,7 @@ a:hover {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	
-	border: solid 0.1rem black;
+
 	transition: all .3s ease;
 }
 
@@ -163,8 +162,12 @@ a:hover {
 	padding: 0 10px;
 	
 	background-color: rgba(255,255,255,0.8);
+
+    border: solid 0.1rem black;
+    border-top: none;
 	
 	text-align: center;
+    font-size: 2rem;
 	transition: all .3s ease;
 }
 
@@ -245,6 +248,23 @@ a:hover {
     cursor: pointer;
 }
 
+.aanbod .image {
+    max-height: none;
+    height: 300px;
+}
+
+@media screen and (max-width: 500px) {
+    .aanbod .image {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .aanbod .image {
+        height: 250px;
+    }
+}
+
 .aanbod .image img,
 .image-met-uitleg .image img,
 .image-gallery .image img {
@@ -296,6 +316,7 @@ a:hover {
     max-width: 130%;
 }
 
+.aanbod .image.focus-up img,
 .image-met-uitleg .image.focus-up img,
 .image-gallery .image.focus-up img {
     top: 80%;
