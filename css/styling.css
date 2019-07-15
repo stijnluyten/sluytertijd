@@ -14,10 +14,18 @@ h1 {
 	font-family: 'Gloria Hallelujah', cursive;
 }
 
+.uitleg h1 {
+    margin-bottom: 20px;
+}
+
 a {
 	font-family: 'Gloria Hallelujah', cursive;
 	color: #000000;
 	text-decoration: none;
+}
+
+b.highlight {
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 p.uitleg {
