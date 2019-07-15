@@ -310,6 +310,12 @@ a:hover {
 
 }
 
+.aanbod .image.focus-left img,
+.image-met-uitleg .image.focus-left img,
+.image-gallery .image.focus-left img {
+	left: 60%;
+}
+
 .aanbod .image.landscape img,
 .image-met-uitleg .image.landscape img,
 .image-gallery .image.landscape img {
