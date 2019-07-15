@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('montserrat-regulat.ttf');
+}
+
+@font-face {
+  font-family: 'Gloria Hallelujah';
+  src: url('gloriahallelujah-regular.ttf');
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -19,9 +29,8 @@ h1 {
 }
 
 a {
-	font-family: 'Gloria Hallelujah', cursive;
 	color: #000000;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 b.highlight {
@@ -44,7 +53,7 @@ a:hover {
 }
 
 .top .banner {
-    background: url("../icons/logo.svg");
+    background: url("../style-images/logo.svg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
@@ -102,7 +111,7 @@ a:hover {
 
 .top .navigation .item.selected,
 .top .navigation .item:hover {
-    background: url("../icons/underline.svg") no-repeat center top;
+    background: url("../style-images/underline.svg") no-repeat center top;
     background-size: cover;
 }
 
@@ -401,12 +410,12 @@ a:hover {
 
 .image-detail .next {
     right: 10%;
-    background-image: url("../icons/arrow-right.svg");
+    background-image: url("../style-images/arrow-right.svg");
 }
 
 .image-detail .previous {
     left: 10%;
-    background-image: url("../icons/arrow-left.svg");
+    background-image: url("../style-images/arrow-left.svg");
 }
 
 .image-detail .image {
