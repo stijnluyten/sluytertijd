@@ -1,0 +1,16 @@
+.timer {
+    font-size: 80px;
+}
+
+.steps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.step {
+    margin: 10px;
+    background-color: #c8c8c8;
+    padding: 10px;
+}
