@@ -15,26 +15,57 @@ var schedule = [
   {action: 'OO', time: 2}// OO
 ];
 
-var secondsInMinute = 5;
+var nextSchedule = [
+  {action: '+', time: 1},
+  {action: 'O', time: 1},
+  {action: '++', time: 2},
+  {action: 'OO', time: 2},
+  {action: '++++', time: 4},
+  {action: 'OOO', time: 3},
+  {action: '++++', time: 4},
+  {action: 'OOO', time: 3},
+  {action: '+++++', time: 5},
+  {action: 'OO', time: 2}
+];
 
-$(function () {
-  $('.step').remove();
-  schedule.forEach(function (step) {
-    $('.steps').append(`<div class="step">${step.action}</div>`);
+var soundEffect = new Audio('audio/just-saying.mp3');
+
+var secondsInMinute = 2;
+
+
+function scheduleWO(index) {
+  soundEffect.src = 'audio/just-saying.mp3';
+  soundEffect.play();
+  soundEffect.pause();
+  console.dir(schedule[index]);
+  $('#step_' + index).addClass('busy');
+  tickMinutes(schedule[index].time, function () {
+    $('#step_' + index).removeClass('busy');
+    $('#step_' + index).addClass('done');
+    $('.trigger').click();
   });
-});
-
-function disableButton() {
-  console.log('disabling button');
-  $('.trigger').prop('disabled', true);
 }
 
 
-$('.trigger').click(function () {
-  console.log('start to run! and at end do ' + disableButton);
-  tickMinutes(1, disableButton);
+$(function () {
+  $('.step').remove();
+  schedule.forEach(function (step, index) {
+    $('.steps').append(`<div id="step_${index}" class="step" onclick="javascript:scheduleWO(${index});">${step.action}</div>`);
+  });
+  /*
+    $('.step').each(function(index, element) {
+      console.log('schedule will be: index' + JSON.stringify(schedule[index]));
+      $(element).click(function() {
+        console.dir(schedule[index]);
+        $('#step_' + index).addClass('busy');
+        tickMinutes(schedule[index].time, function() {
+          $('#step_' + index).removeClass('busy');
+          $('#step_' + index).addClass('done');
+        });
+      });
+    });
+    */
 });
-
 
 function tickMinutes(minutes, functionAtEnd) {
   //functionAtEnd();
@@ -51,7 +82,8 @@ function showTime(time) {
 }
 
 function beep() {
-  $('audio#pop')[0].play();
+  soundEffect.play();
+  // $('audio#pop')[0].play();
 }
 
 function tickUntil(startTime, timeToStop, functionAtEnd) {

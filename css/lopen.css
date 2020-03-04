@@ -14,3 +14,11 @@
     background-color: #c8c8c8;
     padding: 10px;
 }
+
+.step.done {
+    background-color: #c8FFc8;
+}
+
+.step.busy {
+    background-color: #FFc800;
+}
