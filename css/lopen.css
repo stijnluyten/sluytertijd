@@ -1,5 +1,17 @@
+body {
+    background-color: #ffd54f;
+    background-image: linear-gradient(#ffecb3 , #ffd54f);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.lessonTitle {
+    margin-top: 20px;
+}
+
 .timer {
     font-size: 80px;
+    font-family: Menlo;
 }
 
 .steps {
@@ -9,10 +21,17 @@
     justify-content: center;
 }
 
-.step {
+.step, .lesson {
     margin: 10px;
-    background-color: #c8c8c8;
     padding: 10px;
+    flex-basis: 80px;
+    text-align: center;
+
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 1px 5px #888888;
+
+    font-size: 24px;
 }
 
 .step.done {
