@@ -4,16 +4,6 @@
 }
 
 @font-face {
-  font-family: 'Abel';
-  src: url('Abel-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'Anton';
-    src: url('Anton-Regular.ttf');
-}
-
-@font-face {
     font-family: 'Bangers';
     src: url('Bangers-Regular.ttf');
 }
@@ -23,15 +13,22 @@ body, html {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: black;
+    position: relative;
+    font-size: 10px;
 }
 
 
-h2 {
-    font-family: "Anton";
+h2, .tagline {
+    font-family: "Bangers";
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 1rem;
 }
 
 p, a, span {
-    font-family: "Abel";
+    font-family: "Montserrat";
+    font-size: 1.6rem;
+    color: black;
 }
 
 main {
@@ -40,9 +37,9 @@ main {
 }
 
 header {
-    max-width: 800px;
+    max-width: 1200px;
     position: relative;
-    background-image: url('../images/box/box_2018-06-10_11-00-12.jpg');
+    background-image: url('../images/box/superheld-03.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -59,57 +56,29 @@ header:before {
     left: 50%;
     margin-left: calc(-33vw / 2);
     top: 8vh;
-    background-image: url('../style-images/logo.svg');
+    background-image: url('../style-images/logo-geel.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
 
 nav {
+    margin-top: 2rem;
+    position: absolute;
     width: 100%;
-    position: absolute;
-    top: 15px;
-    background-color: white;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    max-width: 1200px;
     line-height: 22px;
-}
-
-nav .home {
-    position: absolute;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    top: -15px;
-    left: 15px;
-    width: 8vw;
-    height: 11vw;
-    padding: 15px 20px;
-    background-color: white;
+    justify-content: center;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-}
-
-nav .home:before {
-    content: '';
-    position: absolute;
-
-    height: 6.5vw;
-    width: 6.5vw;
-    left: 50%;
-    margin-left: calc(-6.5vw / 2);
-    top: 7vh;
-    background-image: url('../images/box/box_2018-02-11_16-22-01.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    background-color: white;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    max-width: 400px;
-    margin: auto;
+    justify-content: space-between;
+    margin: 0.5rem
 }
 
 nav ul li {
@@ -130,6 +99,78 @@ nav a:hover {
     text-decoration: none;
 }
 
+.tagline {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    padding: 1rem 3rem;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+}
+
+/* sections */
+
+section {
+    display: flex;
+    max-width: 1200px;
+    margin: 8rem auto;
+    background-color: white;
+    position: relative;
+    border: 1rem solid white;
+}
+
+section.image-strip {
+    flex-direction: column;
+}
+
+section.image-strip h2 {
+    position: absolute;
+    top: 0;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    padding: 1rem 3rem;
+    background-color: white;
+}
+
+section.rows {
+    flex-direction: row;
+}
+
+section.rows {
+    flex-direction: row;
+}
+
+section.image-strip .column {
+    display: flex;
+    flex-direction: column;
+}
+
+section.image-strip .column.large {
+    flex: 2 0 60%;
+}
+
+section.image-strip .column.small {
+    flex: 0 1 40%;
+}
+
+section.image-strip img {
+    align-self: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.text {
+    padding: 3rem 4rem;
+    flex-direction: column;
+}
+
+.centered {
+    justify-content: center;
+}
+
+.centered h2, .centered p {
+    text-align: center;
+}
 
 .visuallyhidden {
     border: 0;
