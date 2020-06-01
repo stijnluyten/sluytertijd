@@ -17,18 +17,28 @@ body, html {
     font-size: 10px;
 }
 
-h2, .tagline, .bang {
+h2, .tagline {
     font-family: "Bangers";
     color: black;
     margin-bottom: 1rem;
-}
-
-.tagline {
-    font-size: 3rem;
-}
-
-h2, .bang {
     font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.bang, a.cta {
+    font-family: "Bangers";
+    color: black;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+a.cta:hover {
+    text-decoration: none;
+    background-color: rgb(238, 195, 60);
+}
+
+.cta, .text-block.cta {
+
 }
 
 p, a, span {
@@ -38,7 +48,7 @@ p, a, span {
 }
 
 main, header, section, nav {
-    max-width: 800px;
+    max-width: 1200px;
 }
 main {
     margin: auto;
@@ -51,6 +61,7 @@ header {
     background-size: cover;
     background-position: center;
     height: 100vh;
+    max-height: 800px;
     margin: auto;
 }
 
@@ -58,10 +69,11 @@ header:before {
     content: '';
     position: absolute;
 
-    height: 6.5vw;
-    width: 33vw;
+    height: 10rem;
+    width: 40rem;
+    max-width: 80vw;
     left: 50%;
-    margin-left: calc(-33vw / 2);
+    margin-left: calc(-40rem / 2);
     top: 60px;
     background-image: url('../style-images/logo-geel.svg');
     background-repeat: no-repeat;
@@ -169,6 +181,18 @@ section.image-strip img {
 
 section.image-strip p {
     padding: 3rem;
+}
+
+section.max-800 {
+    max-width: 800px;
+}
+
+section.max-500 {
+    max-width: 500px;
+}
+
+section.max-600 {
+    max-width: 600px;
 }
 
 section.image-strip img.percent-33 {
