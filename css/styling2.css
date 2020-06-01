@@ -20,9 +20,16 @@ body, html {
 
 h2, .tagline {
     font-family: "Bangers";
-    font-size: 3rem;
     color: black;
     margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
 }
 
 p, a, span {
@@ -31,13 +38,14 @@ p, a, span {
     color: black;
 }
 
+main, header, section {
+    max-width: 1200px;
+}
 main {
     margin: auto;
-    max-width: 1200px;
 }
 
 header {
-    max-width: 1200px;
     position: relative;
     background-image: url('../images/box/superheld-03.jpg');
     background-repeat: no-repeat;
@@ -112,51 +120,107 @@ nav a:hover {
 
 section {
     display: flex;
-    max-width: 1200px;
     margin: 8rem auto;
     background-color: white;
     position: relative;
     border: 1rem solid white;
 }
 
-section.image-strip {
+section.image-strip, section.single-image {
     flex-direction: column;
 }
 
-section.image-strip h2 {
-    position: absolute;
-    top: 0;
-    margin-top: 2rem;
-    margin-left: 2rem;
-    padding: 1rem 3rem;
-    background-color: white;
+section.single-image.portrait {
+    max-width: 50%;
+}
+
+section.single-image.landscape {
+    max-width: 80%;
+}
+
+section.single-image img {
+    max-width: 100%;
+    padding: 1rem;
 }
 
 section.rows {
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
-section.rows {
-    flex-direction: row;
+section.columns {
+    flex-direction: column;
 }
 
-section.image-strip .column {
+section.narrow {
+    max-width: fit-content;
+    width: fit-content;
+}
+
+section.image-strip .columns {
     display: flex;
     flex-direction: column;
-}
-
-section.image-strip .column.large {
-    flex: 2 0 60%;
-}
-
-section.image-strip .column.small {
-    flex: 0 1 40%;
 }
 
 section.image-strip img {
     align-self: center;
     max-width: 100%;
     max-height: 100%;
+    padding: 1rem;
+}
+
+section.image-strip p {
+    padding: 3rem;
+}
+
+section.image-strip img.percent-33 {
+    max-width: 33%;
+}
+
+section.image-strip img.percent-40 {
+    max-width: 40%;
+}
+
+section.image-strip img.percent-50 {
+    max-width: 50%;
+}
+
+section.image-strip img.percent-60 {
+    max-width: 60%;
+}
+
+section.image-strip img.percent-100 {
+    max-width: 100%;
+}
+
+.text-block {
+    padding: 1rem 3rem;
+    background-color: white;
+}
+
+.shadow {
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+
+.border {
+    border: solid 1px #707070;
+}
+
+.over {
+    position: absolute;
+    margin: 2rem;
+}
+
+.over.left {
+    left: 0;
+}
+
+.over.right {
+    right: 0;
+}
+
+.over.bottom {
+    bottom: 0;
 }
 
 .text {
