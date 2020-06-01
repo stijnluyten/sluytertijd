@@ -17,8 +17,7 @@ body, html {
     font-size: 10px;
 }
 
-
-h2, .tagline {
+h2, .tagline, .bang {
     font-family: "Bangers";
     color: black;
     margin-bottom: 1rem;
@@ -28,7 +27,7 @@ h2, .tagline {
     font-size: 3rem;
 }
 
-h2 {
+h2, .bang {
     font-size: 2.5rem;
 }
 
@@ -38,8 +37,8 @@ p, a, span {
     color: black;
 }
 
-main, header, section {
-    max-width: 1200px;
+main, header, section, nav {
+    max-width: 800px;
 }
 main {
     margin: auto;
@@ -47,7 +46,7 @@ main {
 
 header {
     position: relative;
-    background-image: url('../images/box/superheld-03.jpg');
+    background-image: url('../images/box/thor-02.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -63,7 +62,7 @@ header:before {
     width: 33vw;
     left: 50%;
     margin-left: calc(-33vw / 2);
-    top: 8vh;
+    top: 60px;
     background-image: url('../style-images/logo-geel.svg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -74,7 +73,6 @@ nav {
     margin-top: 2rem;
     position: absolute;
     width: 100%;
-    max-width: 1200px;
     line-height: 22px;
     display: flex;
     justify-content: center;
@@ -103,7 +101,7 @@ nav ul a {
 }
 
 nav a:hover {
-    color: black;
+    color: rgb(238, 195, 60);
     text-decoration: none;
 }
 
@@ -232,7 +230,7 @@ section.image-strip img.percent-100 {
     justify-content: center;
 }
 
-.centered h2, .centered p {
+.centered .bang, .centered p, .centered h2 {
     text-align: center;
 }
 
