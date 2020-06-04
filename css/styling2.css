@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: 'Montserrat-bold';
+    src: url('Montserrat-Bold.ttf');
+}
+
+@font-face {
     font-family: 'Bangers';
     src: url('Bangers-Regular.ttf');
 }
@@ -17,7 +22,7 @@ body, html {
     font-size: 10px;
 }
 
-h2, .tagline {
+.tagline {
     font-family: "Bangers";
     color: black;
     margin-bottom: 1rem;
@@ -25,20 +30,45 @@ h2, .tagline {
     text-decoration: none;
 }
 
-.bang, a.cta {
+h2 {
+    padding: 4rem 4rem 0 4rem;
+    font-family: "Bangers";
+    color: white;
+    text-decoration: none;
+    font-size: 5rem;
+}
+
+h2.center {
+    text-align: center;
+}
+
+.bang {
     font-family: "Bangers";
     color: black;
+    background-color: #EFDD3E;
     font-size: 2.5rem;
     text-decoration: none;
 }
 
-a.cta:hover {
+a.cta {
+    font-family: "Bangers";
+    color: black;
+    font-size: 2.5rem;
     text-decoration: none;
-    background-color: rgb(238, 195, 60);
+
+    border: 2.4rem solid transparent;
+
+    border-image-source: url('../style-images/cta-arrow-right-white.svg');
+    border-image-width: 20;
+    border-image-slice: 30%;
+    border-image-outset: 1;
+    border-image-repeat: round;
+    padding: 2rem 6rem 2rem 1rem;
 }
 
-.cta, .text-block.cta {
-
+a.cta:hover, a.cta:active {
+    text-decoration: none;
+    color: #3e4fef;
 }
 
 p, a, span {
@@ -54,7 +84,7 @@ main {
     margin: auto;
 }
 
-header {
+header.home {
     position: relative;
     background-image: url('../images/box/thor-02.jpg');
     background-repeat: no-repeat;
@@ -65,7 +95,32 @@ header {
     margin: auto;
 }
 
-header:before {
+header {
+    position: relative;
+    background-image: url('../images/banners/header-01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 80%;
+    height: 200px;
+    margin: 0 auto 8rem auto;
+}
+
+header h1 {
+    position: absolute;
+    color: white;
+    font-size: 10rem;
+    font-family: 'Bangers';
+    height: 10rem;
+    width: 100%;
+    text-align: center;
+    top: 60px;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+header.home:before {
     content: '';
     position: absolute;
 
@@ -113,27 +168,64 @@ nav ul a {
 }
 
 nav a:hover {
-    color: rgb(238, 195, 60);
+    color: #e79d28;
     text-decoration: none;
 }
 
 .tagline {
     position: absolute;
-    bottom: 2rem;
-    left: 2rem;
+    bottom: 5rem;
+    left: 5rem;
     padding: 1rem 3rem;
     background-color: rgba(0, 0, 0, .5);
     color: white;
 }
 
+@keyframes ontdek-animatie {
+    0%   {bottom: 6rem;}
+    50%  {bottom: 4rem;}
+    100% {bottom: 6rem;}
+}
+
+.ontdek {
+    position: absolute;
+    bottom: 6rem;
+    right: 5rem;
+    width: 20rem;
+    height: 20rem;
+    padding-top: 3rem;
+
+    font-family: Bangers;
+    font-size: 2.5rem;
+    background-image: url('../style-images/cta-arrow-down-white.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: black;
+    text-align: center;
+
+    /* animation: 3s linear 1s infinite running slidein; */
+    animation: 3s ease-in-out 1s infinite ontdek-animatie;
+    transition: all 300ms ease-in-out;
+}
+
+.ontdek:hover {
+    animation: none;
+    text-decoration: none;
+    /*color: #e79d28;*/
+    color: #3e4fef;
+}
+
+/* replace #eec33b with #e79d28; or #EFDD3E */
+
 /* sections */
 
 section {
     display: flex;
-    margin: 8rem auto;
+    margin: 0rem auto 8rem auto;
     background-color: white;
     position: relative;
-    border: 1rem solid white;
+    border: 0.5rem solid white;
 }
 
 section.image-strip, section.single-image {
@@ -196,7 +288,7 @@ section.max-600 {
 }
 
 section.image-strip img.percent-33 {
-    max-width: 33%;
+    max-width: 33.3%;
 }
 
 section.image-strip img.percent-40 {
@@ -213,6 +305,14 @@ section.image-strip img.percent-60 {
 
 section.image-strip img.percent-100 {
     max-width: 100%;
+}
+
+section.cta-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
 }
 
 .text-block {
@@ -250,6 +350,10 @@ section.image-strip img.percent-100 {
     flex-direction: column;
 }
 
+.text.aanbod p:first-of-type {
+    font-family: 'Montserrat-bold';
+}
+
 .centered {
     justify-content: center;
 }
@@ -268,3 +372,86 @@ section.image-strip img.percent-100 {
     position: absolute;
     width: 1px;
 }
+
+/* Aanbod */
+
+.overzicht {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    background-color: black;
+    border: none;
+}
+
+.overzicht .aanbod {
+    position: relative;
+    text-decoration: none;
+    margin: 0 4rem;
+    padding: 2rem 0 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    align-items: center;
+    background-color: white;
+}
+
+.overzicht .aanbod:hover {
+    text-decoration: none;
+    color: rgba(0,0,0,.5);
+}
+
+.overzicht .aanbod .naam {
+    font-size: 5rem;
+    font-family: 'Montserrat';
+}
+
+.overzicht .aanbod:hover .naam,
+.overzicht .aanbod:hover .prijs {
+    color: #e79d28;
+}
+
+.overzicht .aanbod .prijs {
+    font-size: 5rem;
+    font-family: 'Bangers';
+    margin-bottom: 2rem;
+}
+
+.overzicht .aanbod ul {
+    padding: 0;
+}
+
+.overzicht .aanbod ul:after {
+    content: '';
+    background-image: url('../style-images/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    right: calc(50% - 40%);
+    width: 80%;
+    height: 10rem;
+
+    transition: all 300ms ease-in-out;
+    margin-top: -1rem;
+}
+
+.overzicht .aanbod:hover ul:after {
+    margin-top: 0rem;
+}
+
+.overzicht .aanbod ul li {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Montserrat';
+    list-style: none;
+    color: rgba(0,0,0,.5);
+}
+
+.overzicht .aanbod a {
+    position: relative;
+    font-family: 'Bangers';
+    font-size: 5rem;
+}
+
