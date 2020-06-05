@@ -55,6 +55,7 @@ a.cta {
     font-family: "Bangers";
     color: black;
     font-size: 2.5rem;
+    line-height: 1.5rem;
     text-decoration: none;
 
     border: 2.4rem solid transparent;
@@ -63,7 +64,7 @@ a.cta {
     border-image-width: 20;
     border-image-slice: 30% 30% 30% 20%;
     border-image-outset: 1;
-    border-image-repeat: round;
+    border-image-repeat: stretch;
     padding: 2rem 6rem 2rem 1rem;
 }
 
@@ -87,7 +88,7 @@ main {
 
 header.home {
     position: relative;
-    background-image: url('../images/box/thor-02.jpg');
+    background-image: url('../images/fantasy/thor-02.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -233,14 +234,6 @@ section.image-strip, section.single-image {
     flex-direction: column;
 }
 
-section.single-image.portrait {
-    max-width: 50%;
-}
-
-section.single-image.landscape {
-    max-width: 80%;
-}
-
 section.single-image img {
     max-width: 100%;
     padding: 1rem;
@@ -288,6 +281,10 @@ section.max-600 {
     max-width: 600px;
 }
 
+section.single-image.landscape {
+    max-width: 80%;
+}
+
 section.image-strip img.percent-33 {
     max-width: 33.3%;
 }
@@ -333,16 +330,31 @@ section.cta-section {
 
 /* Tablet version */
 @media screen and (max-width: 768px) {
-
-
+    header {
+        height: 150px;
+    }
     body, html {
         font-size: 6px;
+    }
+    main {
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 /* mobile version */
 @media screen and (max-width: 425px) {
+    section.rows {
+        flex-direction: column;
+    }
+
+    section.single-image.landscape,
+    section.image-strip img.percent-33,
+    section.image-strip img.percent-50 {
+        max-width: 100%;
+    }
+
     .over {
-        position: relative;
+        /* position: relative; */
         flex: 0 0 100%;
         margin: 0;
     }
