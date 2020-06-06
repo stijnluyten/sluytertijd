@@ -22,13 +22,6 @@ body, html {
     font-size: 10px;
 }
 
-.tagline {
-    font-family: "Bangers";
-    color: black;
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-    text-decoration: none;
-}
 
 h2 {
     padding: 4rem 4rem 0 4rem;
@@ -58,13 +51,14 @@ a.cta {
     line-height: 1.5rem;
     text-decoration: none;
 
-    border: 2.4rem solid transparent;
+    border: 2.4rem solid white;
 
     border-image-source: url('../style-images/cta-arrow-right-white.svg');
     border-image-width: 20;
     border-image-slice: 30% 30% 30% 20%;
     border-image-outset: 1;
     border-image-repeat: stretch;
+
     padding: 2rem 6rem 2rem 1rem;
 }
 
@@ -77,6 +71,13 @@ p, a, span {
     font-family: "Montserrat";
     font-size: 1.6rem;
     color: black;
+}
+
+a {
+    font-family: "Montserrat-bold";
+}
+a:hover {
+    color: #3e4fef;
 }
 
 main, header, section, nav {
@@ -131,7 +132,7 @@ header.home:before {
     max-width: 80vw;
     left: 50%;
     margin-left: calc(-40rem / 2);
-    top: 60px;
+    top: 6rem;
     background-image: url('../style-images/logo-geel.svg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -150,6 +151,7 @@ nav {
 }
 
 nav ul {
+    padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -175,9 +177,19 @@ nav a:hover {
 }
 
 .tagline {
+    display: flex;
+    justify-content: center;
     position: absolute;
-    bottom: 5rem;
-    left: 5rem;
+    top: 16rem;
+    width: 100%;
+}
+.tagline span {
+    display: block;
+    font-family: "Bangers";
+    color: black;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-decoration: none;
     padding: 1rem 3rem;
     background-color: rgba(0, 0, 0, .5);
     color: white;
@@ -326,42 +338,6 @@ section.cta-section {
     position: absolute;
     margin: 2rem;
 
-}
-
-/* Tablet version */
-@media screen and (max-width: 768px) {
-    header {
-        height: 150px;
-    }
-    body, html {
-        font-size: 6px;
-    }
-    main {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-}
-/* mobile version */
-@media screen and (max-width: 425px) {
-    section.rows {
-        flex-direction: column;
-    }
-
-    section.single-image.landscape,
-    section.image-strip img.percent-33,
-    section.image-strip img.percent-50 {
-        max-width: 100%;
-    }
-
-    .over {
-        /* position: relative; */
-        flex: 0 0 100%;
-        margin: 0;
-    }
-
-    .bang {
-        box-shadow: none;
-    }
 }
 
 .over.left {
@@ -632,3 +608,94 @@ section.cta-section {
     max-width: 160%;
 }
 
+/* footer */
+
+footer {
+    margin: 30px auto 0;
+    max-width: 800px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+    color: gray;
+    background-color: white;
+
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-wrap: wrap;
+        margin: 30px 20px;
+    }
+}
+
+footer .company {
+    font-family: 'Bangers';
+    font-size: 1.2rem;
+}
+
+footer .vat {
+    padding-left: 1rem;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: gray;
+}
+
+
+
+/* Tablet version */
+@media screen and (max-width: 768px) {
+    header {
+        height: 150px;
+    }
+    body, html {
+        font-size: 6px;
+    }
+    main {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+/* mobile version */
+@media screen and (max-width: 425px) {
+    section.rows {
+        flex-direction: column;
+    }
+
+    section.single-image.landscape,
+    section.image-strip img.percent-33,
+    section.image-strip img.percent-50 {
+        max-width: 100%;
+    }
+
+    .over {
+        /* position: relative; */
+        flex: 0 0 100%;
+        margin: 0;
+    }
+
+    .bang {
+        box-shadow: none;
+    }
+
+    .overzicht {
+        flex-direction: column;
+    }
+
+    .overzicht .aanbod {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0 0 6rem 0;
+    }
+
+    .overzicht .aanbod ul:after {
+        margin-top: 0;
+    }
+
+    .overzicht .aanbod .prijs {
+        margin-bottom: 0;
+    }
+}
