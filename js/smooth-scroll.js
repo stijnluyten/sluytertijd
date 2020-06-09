@@ -10,7 +10,7 @@ $("a").on('click', function (event) {
     $('html, body').animate({
       scrollTop: scrollTo
     }, 400, 'swing', function () {
-      // window.location.hash = hash;
+      window.location.hash = hash;
     });
   }
 });
